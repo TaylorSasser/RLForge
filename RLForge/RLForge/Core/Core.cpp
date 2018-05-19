@@ -2,27 +2,32 @@
 
 
 namespace Core {
-	HANDLE hOutput, hOldOutput;
-	HANDLE hError, hOldError;
-	HANDLE hInput, hOldInput;
+	
+	HANDLE Output, OldOutput;
+	HANDLE Error, OldError;
+	HANDLE Input, OldInput;
 
 	void AttachConsole() {
-		FILE* StdOut;
-		::AllocConsole() && ::AttachConsole(GetCurrentProcessId());
-		freopen_s(&StdOut,"CONOUT$", "wt", stdout);  
-		std::ios::sync_with_stdio(1);
+		FILE *StdOut;
+		if (AllocConsole() && ::AttachConsole(GetCurrentProcessId()))
+		{
+			freopen_s(&StdOut,"CONOUT$", "wt", stdout);
+			std::ios::sync_with_stdio(true);
+		}
 	}
 
-	void DetachConsole() {
-		if (hOutput && hInput && hError) {
+	void DetachConsole()
+	{
+		if (Output && Input && Error)
+		{
 			FreeConsole();
 
-			if (hOldOutput)
-				SetStdHandle(STD_OUTPUT_HANDLE, hOldOutput);
-			if (hOldInput)
-				SetStdHandle(STD_OUTPUT_HANDLE, hOldInput);
-			if (hOldError)
-				SetStdHandle(STD_OUTPUT_HANDLE, hOldError);
+			if (OldOutput)
+				SetStdHandle(STD_OUTPUT_HANDLE, OldOutput);
+			if (OldInput)
+				SetStdHandle(STD_OUTPUT_HANDLE, OldInput);
+			if (OldError)
+				SetStdHandle(STD_OUTPUT_HANDLE, OldError);
 		}
 	}
 }	

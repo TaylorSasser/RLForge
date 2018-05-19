@@ -252,7 +252,7 @@ namespace TypeErasure
                   Storage{std::forward<T>(Instance),Pointer}
 
         {
-            (Setup<Ns + 1, std::decay_t<T>>(decltype(Get(Detail::TypeMappings<I, Ns + 1>{})){}), ...);
+            (Setup<Ns + 1, std::decay_t<T>>(decltype(Get(Detail::TypeMappings<I, Ns + 1>{})){}),...);
         }
 
         template<std::size_t N,class T,class TExpression, class... Arguments>
@@ -263,8 +263,6 @@ namespace TypeErasure
                 return Detail::ExpressionWrapper<TExpression>{}(*static_cast<T*>(Self), Args...);
             });
         }
-
-
         TStorage Storage;
         TVTable VTable;
     };
@@ -284,8 +282,8 @@ namespace TypeErasure
     {
         static_assert(std::is_empty<TExpression>{});
         return Detail::CallImpl<I>(reinterpret_cast<const Detail::PolymorphicBase&>(Interface),
-                                   std::integral_constant<std::size_t,Detail::TypeMappingSize<I, class Call>() + 1> {},
-                                   Detail::TypeList<Return>{}, Expression, std::forward<Ts>(Arguments)...);
+           std::integral_constant<std::size_t,Detail::TypeMappingSize<I, class Call>() + 1> {},
+           Detail::TypeList<Return>{}, Expression, std::forward<Ts>(Arguments)...);
     }
 }
 
