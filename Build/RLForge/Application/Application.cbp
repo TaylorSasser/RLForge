@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Application"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\RLForge\;CMake Files\RLForge\Application\;CMake Files\RLForge\RLForge\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Application">
+				<Option output="C:/Users/Taylor/Desktop/RLForge/Build/Bin/RLForgeLoader.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build/Bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 Application"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Application/fast">
+				<Option output="C:/Users/Taylor/Desktop/RLForge/Build/Bin/RLForgeLoader.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build/Bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/Program Files (x86)/mingw-w64/i686-7.3.0-win32-sjlj-rt_v5-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 Application/fast"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-7~1.0-W/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/Application/Core/Application.cpp">
+			<Option target="Application"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/Application/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\RLForge\Application\"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\RLForge\RLForge\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
