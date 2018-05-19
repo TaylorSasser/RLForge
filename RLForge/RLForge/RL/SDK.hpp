@@ -4,6 +4,7 @@
 
 #include <set>
 #include <string>
+#include <locale>
 
 #include "SDK/RL_Basic.hpp"
 

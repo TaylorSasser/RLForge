@@ -14,7 +14,8 @@ bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved) {
         break;
     case DLL_PROCESS_DETACH:
         break;
-    default:break;
+    default:
+    	break;
     };
     return true;
 }

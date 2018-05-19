@@ -95,5 +95,8 @@ set(HEADER_LIB  ${HEADER_CORE}
 
 
 
+
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMPILE_FLAGS}")
 add_library(RLForge SHARED ${SOURCE_LIB} ${HEADER_LIB})
+
+target_link_libraries(RLForge Psapi)
