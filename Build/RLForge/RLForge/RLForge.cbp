@@ -72,151 +72,16 @@
 		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Meta/TypeErasure.hpp">
 			<Option target="RLForge"/>
 		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Module/ModBase.hpp">
+			<Option target="RLForge"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Module/Mods/TestMod.hpp">
+			<Option target="RLForge"/>
+		</Unit>
 		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Pattern/SignatureFinder.cpp">
 			<Option target="RLForge"/>
 		</Unit>
 		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Pattern/SignatureFinder.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_AkAudio_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_AkAudio_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_AkAudio_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_AkAudio_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Basic.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Basic.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Core_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Core_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Core_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Core_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Engine_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Engine_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Engine_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_Engine_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_GFxUI_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_GFxUI_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_GFxUI_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_GFxUI_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_GameFramework_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_GameFramework_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_GameFramework_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_GameFramework_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_IpDrv_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_IpDrv_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_IpDrv_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_IpDrv_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_OnlineSubsystemSteamworks_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_OnlineSubsystemSteamworks_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_OnlineSubsystemSteamworks_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_OnlineSubsystemSteamworks_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_ProjectX_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_ProjectX_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_ProjectX_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_ProjectX_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_TAGame_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_TAGame_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_TAGame_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_TAGame_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_WinDrv_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_WinDrv_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_WinDrv_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_WinDrv_structs.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_XAudio2_classes.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_XAudio2_functions.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_XAudio2_parameters.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/RL/SDK/RL_XAudio2_structs.hpp">
 			<Option target="RLForge"/>
 		</Unit>
 		<Unit filename="C:/Users/Taylor/Desktop/RLForge/CMakeLists.txt">

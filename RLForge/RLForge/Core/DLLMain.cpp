@@ -1,5 +1,8 @@
 #include <Windows.h>
-#include <iostream>
+
+#include "../Module/Mods/TestMod.hpp"
+#include "../Module/ModBase.hpp"
+#include "Core.h"
 
 HANDLE MainThread;
 void onAttach(HMODULE hModule);
@@ -10,8 +13,8 @@ bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
     switch (dwReason)
     {
     	case DLL_PROCESS_ATTACH:
-       		MainThread = CreateThread(nullptr, 0, reinterpret_cast<LPTHREAD_START_ROUTINE>(onAttach), hModule, 0, nullptr);
-        	break;
+			MainThread = CreateThread(nullptr, 0, reinterpret_cast<LPTHREAD_START_ROUTINE>(onAttach), hModule, 0, nullptr);
+			break;
 		case DLL_PROCESS_DETACH:
 			break;
 		default:
@@ -24,6 +27,13 @@ bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 void onAttach(HMODULE hModule)
 {
     DisableThreadLibraryCalls(hModule);
+    Core::AttachConsole();
+    
+    TestMod TestModule("TestModule");
+    PolyModuleBase(TestModule).onEnable();
+	PolyModuleBase(TestModule).onDisable();
+	PolyModuleBase(TestModule).onToggle();
+	PolyModuleBase(TestModule).isEnabled();
 }
 
 void onDetach(HMODULE hModule)
