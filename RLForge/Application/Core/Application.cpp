@@ -3,33 +3,35 @@
 #include <thread>
 #include <chrono>
 
+#define _GLIBCXX_HAS_GTHREADS
+
 int main(int argc,char* argv[])
 {
-    HWND RLWindow = FindWindowA("LaunchUnrealUWindowsClient", "Rocket League (32-bit, DX9)");
-    DWORD RocketLeagueProcessID;
-    GetWindowThreadProcessId(RLWindow,&RocketLeagueProcessID);
-
+    
     wchar_t PathBuffer[MAX_PATH] = {};
-    GetFullPathNameW(L"RLForge",MAX_PATH,PathBuffer,nullptr);
+    GetFullPathNameW(L"RLForge.dll",MAX_PATH,PathBuffer,nullptr);
 
     HANDLE ProcessHandle;
     LPVOID RemoteString,LoadLibAddress;
 
-    while(!RocketLeagueProcessID)
+    for(;;)
     {
-        std::cout << "Rocket League process id not found \n";
-        Sleep(static_cast<DWORD>(60000));
-        ProcessHandle = OpenProcess(PROCESS_ALL_ACCESS,false,RocketLeagueProcessID);
-    }
+		HWND RLWindow = FindWindowA("LaunchUnrealUWindowsClient", "Rocket League (32-bit, DX9)");
+		DWORD RocketLeagueProcessID = 0;
+		GetWindowThreadProcessId(RLWindow,&RocketLeagueProcessID);
+		
+		if (RocketLeagueProcessID && RLWindow)
+		{
+			ProcessHandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, RocketLeagueProcessID);
+			LoadLibAddress = (LPVOID)GetProcAddress(GetModuleHandleA("kernel32.dll"), "LoadLibraryW");
+			RemoteString = (LPVOID)VirtualAllocEx(ProcessHandle, NULL, sizeof(PathBuffer), MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
+			WriteProcessMemory(ProcessHandle, (LPVOID)RemoteString,PathBuffer, sizeof(PathBuffer), NULL);
+			CreateRemoteThread(ProcessHandle, NULL, NULL, (LPTHREAD_START_ROUTINE)LoadLibAddress, (LPVOID)RemoteString, NULL, NULL);
+			CloseHandle(ProcessHandle);
+			break;
+		}
+	}
 
-    if (ProcessHandle)
-    {
-        std::cout << "Rocket League Process found \n";
-        LoadLibAddress = (LPVOID)GetProcAddress(GetModuleHandleA("kernel32.dll"), "LoadLibraryW");
-        RemoteString = (LPVOID)VirtualAllocEx(ProcessHandle,nullptr, sizeof(PathBuffer), MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
-        WriteProcessMemory(ProcessHandle, (LPVOID)RemoteString,PathBuffer, sizeof(PathBuffer), nullptr);
-        CreateRemoteThread(ProcessHandle,nullptr,nullptr, (LPTHREAD_START_ROUTINE)LoadLibAddress, (LPVOID)RemoteString,nullptr,nullptr);
-        CloseHandle(ProcessHandle);
-    }
+ 
 
 }

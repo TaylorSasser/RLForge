@@ -28,12 +28,8 @@ void onAttach(HMODULE hModule)
 {
     DisableThreadLibraryCalls(hModule);
     Core::AttachConsole();
+    std::cout << "Test \n";
     
-    TestMod TestModule("TestModule");
-    PolyModuleBase(TestModule).onEnable();
-	PolyModuleBase(TestModule).onDisable();
-	PolyModuleBase(TestModule).onToggle();
-	PolyModuleBase(TestModule).isEnabled();
 }
 
 void onDetach(HMODULE hModule)

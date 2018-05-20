@@ -8,13 +8,9 @@ namespace Core {
 	HANDLE Input, OldInput;
 
 	void AttachConsole() {
-		FILE *StdOut;
-		FILE *StdErr;
 		AllocConsole();
 		SetConsoleCtrlHandler(NULL,true);
-		freopen_s(&StdOut,"CONOUT$", "w", stdout);
-		freopen_s($StdErr,"CONOUT&", "w", stderr);
-		std::ios::sync_with_stdio(true);
+		freopen("CON", "w", stdout);
 	}
 
 	void DetachConsole()
