@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
@@ -154,3 +155,167 @@
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="RLForge/RLForge"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\RLForge\;CMake Files\RLForge\Application\;CMake Files\RLForge\RLForge\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RLForge">
+				<Option output="C:/Users/Taylor/Desktop/RLForge/Build/Bin/RLForge.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge/Makefile&quot;  VERBOSE=1 RLForge"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="RLForge/fast">
+				<Option output="C:/Users/Taylor/Desktop/RLForge/Build/Bin/RLForge.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge/Makefile&quot;  VERBOSE=1 RLForge/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/RLForge/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Application">
+				<Option output="C:/Users/Taylor/Desktop/RLForge/Build/Bin/RLForgeLoader.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build/Bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 Application"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Application/fast">
+				<Option output="C:/Users/Taylor/Desktop/RLForge/Build/Bin/RLForgeLoader.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Taylor/Desktop/RLForge/Build/Bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-7.3.0-win32-seh-rt_v5-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/7.3.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 Application/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-W/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Taylor/Desktop/RLForge/Build/RLForge/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/Application/Core/Application.cpp">
+			<Option target="Application"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Core/Core.cpp">
+			<Option target="RLForge"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Core/Core.h">
+			<Option target="RLForge"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Core/DLLMain.cpp">
+			<Option target="RLForge"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Meta/TypeErasure.hpp">
+			<Option target="RLForge"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Module/ModBase.hpp">
+			<Option target="RLForge"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Module/Mods/TestMod.hpp">
+			<Option target="RLForge"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Pattern/SignatureFinder.cpp">
+			<Option target="RLForge"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Pattern/SignatureFinder.hpp">
+			<Option target="RLForge"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/Application/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\RLForge\Application\"/>
+		</Unit>
+		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\RLForge\RLForge\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
+>>>>>>> 317b7fb15cb312f0991dc44818b59a193b1e8488
