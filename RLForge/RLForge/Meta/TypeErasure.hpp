@@ -3,9 +3,6 @@
 #include <type_traits>
 #include <utility>
 
-//Basically A Copy of Boost::TE With a few changes to get it working on visual studio 2017 and the autocomplete;
-
-
 namespace TypeErasure
 {
     namespace Detail

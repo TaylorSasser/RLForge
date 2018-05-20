@@ -8,7 +8,7 @@ HANDLE MainThread;
 void onAttach(HMODULE hModule);
 void onDetach(HMODULE hModule);
 
-bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
+extern "C" bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 {
     switch (dwReason)
     {

@@ -78,12 +78,6 @@
 		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Module/Mods/TestMod.hpp">
 			<Option target="RLForge"/>
 		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Pattern/SignatureFinder.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Pattern/SignatureFinder.hpp">
-			<Option target="RLForge"/>
-		</Unit>
 		<Unit filename="C:/Users/Taylor/Desktop/RLForge/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

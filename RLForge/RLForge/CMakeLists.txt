@@ -95,13 +95,13 @@ source_group(Core\\SDK FILES ${SDK})
 
 set(SOURCE_LIB      ${SOURCE_CORE}
                     ${SOURCE_META}
-                    ${SOURCE_PATTERN}
-                    ${SOURCE_MODULE})
+                    ${SOURCE_MODULE}
+                    )
 
 set(HEADER_LIB      ${HEADER_CORE}
                     ${HEADER_META}
-                    ${HEADER_PATTERN}
-                    ${HEADER_MODULE})
+                    ${HEADER_MODULE}
+                    )
 
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMPILE_FLAGS}")
@@ -109,5 +109,3 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 set(CMAKE_CXX_STANDARD 17)
 
 add_library(RLForge SHARED ${SOURCE_LIB} ${HEADER_LIB})
-set_target_properties(RLForge PROPERTIES COMPILE_FLAGS "-m32" LINK_FLAGS "-m32")
-target_link_libraries(RLForge Psapi)

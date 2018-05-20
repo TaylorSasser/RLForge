@@ -9,11 +9,12 @@ namespace Core {
 
 	void AttachConsole() {
 		FILE *StdOut;
-		if (AllocConsole() && ::AttachConsole(GetCurrentProcessId()))
-		{
-			freopen_s(&StdOut,"CONOUT$", "wt", stdout);
-			std::ios::sync_with_stdio(true);
-		}
+		FILE *StdErr;
+		AllocConsole();
+		SetConsoleCtrlHandler(NULL,true);
+		freopen_s(&StdOut,"CONOUT$", "w", stdout);
+		freopen_s($StdErr,"CONOUT&", "w", stderr);
+		std::ios::sync_with_stdio(true);
 	}
 
 	void DetachConsole()
