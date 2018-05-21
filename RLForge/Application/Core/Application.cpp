@@ -1,5 +1,9 @@
 #include <Windows.h>
 #include <iostream>
+#include <tlhelp32.h>
+#include <shlwapi.h>
+
+DWORD GetProcessIdFromProcessName(const wchar_t* ProcessName);
 
 int main(int argc,char* argv[])
 {
@@ -11,12 +15,12 @@ int main(int argc,char* argv[])
 
     for(;;)
     {
-		HWND RLWindow = FindWindowA("LaunchUnrealUWindowsClient", "Rocket League (32-bit, DX9)");
-		DWORD RocketLeagueProcessID = 0;
-		GetWindowThreadProcessId(RLWindow,&RocketLeagueProcessID);
-		
-		if (RocketLeagueProcessID && RLWindow)
+
+       DWORD RocketLeagueProcessID = GetProcessIdFromProcessName(L"Notepad++");
+
+		if (RocketLeagueProcessID)
 		{
+		    std::cout << "ProcessId Found \n";
 			ProcessHandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, RocketLeagueProcessID);
 			LoadLibAddress = (LPVOID)GetProcAddress(GetModuleHandleA("kernel32.dll"), "LoadLibraryW");
 			RemoteString = (LPVOID)VirtualAllocEx(ProcessHandle, NULL, sizeof(PathBuffer), MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
@@ -27,7 +31,30 @@ int main(int argc,char* argv[])
 			break;
 		}
 	}
+}
 
- 
+DWORD GetProcessIdFromProcessName(const wchar_t* ProcessName)
+{
+    PROCESSENTRY32W pe;
+    HANDLE thSnapShot;
+    BOOL HasNextProcess = false;
 
+    thSnapShot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+    if (thSnapShot == INVALID_HANDLE_VALUE)
+    {
+        return false;
+    }
+
+    pe.dwSize = sizeof(PROCESSENTRY32W);
+
+    HasNextProcess = Process32FirstW(thSnapShot, &pe);
+    while (HasNextProcess)
+    {
+        if (StrStrIW(pe.szExeFile, ProcessName))
+        {
+            return pe.th32ProcessID;
+        }
+        HasNextProcess = Process32NextW(thSnapShot, &pe);
+    }
+    return 0;
 }
