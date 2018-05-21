@@ -3,7 +3,6 @@ project("RLForge")
 
 set(COMPILE_FLAGS "-Wno-non-template-friend")
 
-
 ##############################################
 
 set(SOURCE_CORE     Core/DLLMain.cpp
@@ -96,6 +95,7 @@ source_group(Core\\SDK FILES ${SDK})
 set(SOURCE_LIB      ${SOURCE_CORE}
                     ${SOURCE_META}
                     ${SOURCE_MODULE}
+
                     )
 
 set(HEADER_LIB      ${HEADER_CORE}

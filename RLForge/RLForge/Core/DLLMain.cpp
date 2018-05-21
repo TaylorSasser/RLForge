@@ -1,14 +1,11 @@
 #include <Windows.h>
-
-#include "../Module/Mods/TestMod.hpp"
-#include "../Module/ModBase.hpp"
 #include "Core.h"
 
 HANDLE MainThread;
 void onAttach(HMODULE hModule);
 void onDetach(HMODULE hModule);
 
-extern "C" bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
+bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 {
     switch (dwReason)
     {
@@ -28,7 +25,7 @@ void onAttach(HMODULE hModule)
 {
     DisableThreadLibraryCalls(hModule);
     Core::AttachConsole();
-    std::cout << "Test \n";
+    MessageBoxA(nullptr,"Test","Inject",0);
     
 }
 
