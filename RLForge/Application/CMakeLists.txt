@@ -8,4 +8,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 
 add_executable(Application Core/Application.cpp)
-set_target_properties(Application PROPERTIES COMPILE_FLAGS "-m32" LINK_FLAGS "-m32")
+set_target_properties(Application PROPERTIES COMPILE_FLAGS "-m32" LINK_FLAGS "-m32 -static-libgcc")

@@ -1,25 +1,15 @@
 #pragma once
 #include <algorithm>
+#include <functional>
+#include <tuple>
 
 
-namespace Detail
+namespace Functional
 {
-    template<class T>
-    struct Function {};
+    template<class Function, class... Arguments>
+    constexpr auto Invoke(Function&& Func,Arguments&&... Args) noexcept
+    {
 
-    template<class R,class... Args>
-    struct Function<R(Args)> {
-        using FunctionSignature = R(Args);
-    };
+    }
+
 }
-
-class PipeableFunction 
-{
-public:
-    template<class R,class... T>
-    PipeableFunction(Detail::Function<R,T> Function);
-
-
-    PipeableFunction& operator|(const PipeableFunction& NextFunction);
-    PipeableFunction& operator|(PipeableFunction&& NextFunction);
-};

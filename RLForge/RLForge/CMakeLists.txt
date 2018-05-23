@@ -101,7 +101,8 @@ set(SOURCE_LIB      ${SOURCE_CORE}
 set(HEADER_LIB      ${HEADER_CORE}
                     ${HEADER_META}
                     ${HEADER_MODULE}
-        Hooks/AllocateHook.cpp Hooks/AllocateHook.hpp Functional/Functional.cpp Functional/Functional.hpp)
+
+                    )
 
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMPILE_FLAGS}")

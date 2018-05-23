@@ -1,7 +1,7 @@
 #include <Windows.h>
-#include <iostream>
 #include <tlhelp32.h>
 #include <shlwapi.h>
+#include <cstdio>
 
 DWORD GetProcessIdFromProcessName(const wchar_t* ProcessName);
 
@@ -15,12 +15,11 @@ int main(int argc,char* argv[])
 
     for(;;)
     {
-
        DWORD RocketLeagueProcessID = GetProcessIdFromProcessName(L"Notepad++");
 
 		if (RocketLeagueProcessID)
 		{
-		    std::cout << "ProcessId Found \n";
+		    printf("ProcessID found \n%p \n",RocketLeagueProcessID);
 			ProcessHandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, RocketLeagueProcessID);
 			LoadLibAddress = (LPVOID)GetProcAddress(GetModuleHandleA("kernel32.dll"), "LoadLibraryW");
 			RemoteString = (LPVOID)VirtualAllocEx(ProcessHandle, NULL, sizeof(PathBuffer), MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);

@@ -69,18 +69,6 @@
 		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Core/DLLMain.cpp">
 			<Option target="RLForge"/>
 		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Functional/Functional.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Functional/Functional.hpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Hooks/AllocateHook.cpp">
-			<Option target="RLForge"/>
-		</Unit>
-		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Hooks/AllocateHook.hpp">
-			<Option target="RLForge"/>
-		</Unit>
 		<Unit filename="C:/Users/Taylor/Desktop/RLForge/RLForge/RLForge/Meta/TypeErasure.hpp">
 			<Option target="RLForge"/>
 		</Unit>
