@@ -39,6 +39,14 @@ file(GLOB Pattern ${SOURCE_PATTERN} ${HEADER_PATTERN})
 source_group(Core\\Pattern FILES ${Pattern})
 ##############################################
 
+set(SOURCE_HOOKS    Hooks/HookFactory.cpp)
+
+set(HEADER_HOOKS    Hooks/HookFactory.hpp)
+
+file(GLOB Hooks ${SOURCE_HOOKS} ${HEADER_HOOKS})
+source_group(Core\\Hooks FILES ${Hooks})
+##############################################
+
 set(SOURCE_SDK      RL/SDK/RL_AkAudio_functions.cpp
                     RL/SDK/RL_Basic.cpp
                     RL/SDK/RL_Core_functions.cpp
@@ -97,6 +105,7 @@ set(SOURCE_LIB      ${SOURCE_CORE}
                     ${SOURCE_MODULE}
                     ${SOURCE_SDK}
                     ${SOURCE_PATTERN}
+                    ${SOURCE_HOOKS}
                     )
 
 set(HEADER_LIB      ${HEADER_CORE}
@@ -104,6 +113,7 @@ set(HEADER_LIB      ${HEADER_CORE}
                     ${HEADER_MODULE}
                     ${HEADER_SDK}
                     ${HEADER_PATTERN}
+                    ${HEADER_HOOKS}
                     )
 
 set(COMPILE_FLAGS "-Wno-non-template-friend -m32")
