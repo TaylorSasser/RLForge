@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 project("RLForge")
 
-set(COMPILE_FLAGS "-Wno-non-template-friend")
+
 
 ##############################################
 
@@ -95,17 +95,24 @@ source_group(Core\\SDK FILES ${SDK})
 set(SOURCE_LIB      ${SOURCE_CORE}
                     ${SOURCE_META}
                     ${SOURCE_MODULE}
-
+                    ${SOURCE_SDK}
+                    ${SOURCE_PATTERN}
                     )
 
 set(HEADER_LIB      ${HEADER_CORE}
                     ${HEADER_META}
                     ${HEADER_MODULE}
+                    ${HEADER_SDK}
+                    ${HEADER_PATTERN}
                     )
 
+set(COMPILE_FLAGS "-Wno-non-template-friend -m32")
+set(LINKER_FLAGS  "-static-libgcc -static-libstdc++ -m32")
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMPILE_FLAGS}")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+set(CMAKE_CXX_FLAGS_RELEASE)
 set(CMAKE_CXX_STANDARD 17)
 
 add_library(RLForge SHARED ${SOURCE_LIB} ${HEADER_LIB})
+set_target_properties(RLForge PROPERTIES COMPILE_FLAGS ${COMPILE_FLAGS} LINK_FLAGS ${LINKER_FLAGS})
+target_link_libraries(RLForge Psapi)

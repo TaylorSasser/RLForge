@@ -1,6 +1,7 @@
 #pragma once
 #include <optional>
-#include <Windows.h>
+#include <cstdint>
+#include <windows.h>
 
 namespace Detail
 {
