@@ -1,5 +1,10 @@
 #include <Windows.h>
+
 #include "Core.h"
+#include "../Pattern/SignatureFinder.hpp"
+#include "../RL/SDK.hpp"
+
+
 
 HANDLE MainThread;
 void onAttach(HMODULE hModule);
@@ -21,11 +26,12 @@ bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 }
 
 
+
+
 void onAttach(HMODULE hModule)
 {
     DisableThreadLibraryCalls(hModule);
     Core::AttachConsole();
-    MessageBoxA(nullptr,"Test","Inject",0);
     
 }
 

@@ -1,8 +1,7 @@
-#pragma comment(lib, "Psapi.lib")
 #include "SignatureFinder.hpp"
-#include <Psapi.h>
+#include <psapi.h>
 #include <cstring>
-
+#pragma comment(lib,"psapi.lib")
 
 namespace Detail
 {
