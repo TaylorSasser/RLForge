@@ -94,7 +94,8 @@ set(HEADER_SDK      RL/SDK.hpp
                     RL/SDK/RL_WinDrv_structs.hpp
                     RL/SDK/RL_XAudio2_classes.hpp
                     RL/SDK/RL_XAudio2_parameters.hpp
-                    RL/SDK/RL_XAudio2_structs.hpp)
+                    RL/SDK/RL_XAudio2_structs.hpp
+                    Hooks/Detail/FFrame.hpp)
 
 file(GLOB SDK ${SOURCE_SDK} ${HEADER_SDK})
 source_group(Core\\SDK FILES ${SDK})

@@ -15,7 +15,7 @@ int main(int argc,char* argv[])
 
     for(;;)
     {
-       DWORD RocketLeagueProcessID = GetProcessIdFromProcessName(L"Notepad++");
+       DWORD RocketLeagueProcessID = GetProcessIdFromProcessName(L"RocketLeague");
 
 		if (RocketLeagueProcessID)
 		{
