@@ -42,8 +42,8 @@ void onAttach(HMODULE hModule)
     uintptr_t ProcessEventPointer = Detail::FindPattern(GetModuleHandleW(nullptr),ProcessEventPattern,ProcessEventMask);
  	uintptr_t CallFunctionPointer = Detail::FindPattern(GetModuleHandleW(nullptr),CallFunctionPattern,CallFunctionMask);
  	
-	std::cout << std::hex << std::setfill('0') << std::setw(2) << (int)ProcessEventPointer << "\n";
-	std::cout << std::hex << std::setfill('0') << std::setw(2) << (int)CallFunctionPointer << "\n";
+	printf("%p\n",(void*)ProcessEventPointer);
+	printf("%p\n",(void*)CallFunctionPointer);
 }
 
 void onDetach(HMODULE hModule)

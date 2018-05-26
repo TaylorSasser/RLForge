@@ -7,23 +7,21 @@ template<class Signature>
 class FunctionHook {};
 
 template<class Return,class... Args>
-class FunctionHook<Return(Args...)> {
+class FunctionHook<Return(Args...)>
+{
 public:
-	typedef Return (*FunctionSignature)(Args...);
+	typedef Return(*FunctionSignature)(Args...);
 	
 	FunctionHook(FunctionSignature ProxyFunction, FunctionSignature TargetFunction)
 	{
 		OldTargetFunction = TargetFunction;
 	}
-	
-	
 private:
 	FunctionSignature OldTargetFunction;
 };
 
-namespace Detail {
-	
-	[[gnu::naked]] extern void ProcessEventProxy() asm("ProcessEventProxy");
-	[[gnu::naked]] extern void CallFunctionProxy() asm("CallFunctionProxy");
-	
+namespace Detail
+{
+	__attribute__((naked)) extern "C" void ProcessEventProxy() asm("ProcessEventProxy");
+	__attribute__((naked)) extern "C" void CallFunctionProxy() asm("CallFunctionProxy");
 }
