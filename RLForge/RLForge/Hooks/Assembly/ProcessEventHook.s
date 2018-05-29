@@ -23,4 +23,4 @@ ProcessEventHook:
      add $0x20,%esp ; Cleanup
      nop ; alignment
      leave ;
-     ret $0xC ; Return 10?;
+     ret $0xC ; Return 12?;
