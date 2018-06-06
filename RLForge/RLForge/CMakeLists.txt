@@ -2,9 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 project("RLForge")
 
 
-
 ##############################################
-
 set(SOURCE_CORE     Core/DLLMain.cpp
                     Core/Core.cpp)
 
@@ -13,7 +11,6 @@ set(HEADER_CORE     Core/Core.h)
 file(GLOB Core ${SOURCE_CORE} ${HEADER_CORE})
 source_group(Core\\Core FILES ${Core})
 #############################################
-
 set(SOURCE_META)
 
 set(HEADER_META     Meta/TypeErasure.hpp)
@@ -21,7 +18,6 @@ set(HEADER_META     Meta/TypeErasure.hpp)
 file(GLOB Meta ${SOURCE_META} ${HEADER_META})
 source_group(Core\\Meta FILES ${Meta})
 #############################################
-
 set(SOURCE_MODULE)
 
 set(HEADER_MODULE   Module/ModBase.hpp
@@ -30,7 +26,6 @@ set(HEADER_MODULE   Module/ModBase.hpp
 file(GLOB Module ${SOURCE_MODULE} ${HEADER_MODULE})
 source_group(Core\\Module FILES ${Module})
 ##############################################
-
 set(SOURCE_PATTERN  Pattern/SignatureFinder.cpp)
 
 set(HEADER_PATTERN  Pattern/SignatureFinder.hpp)
@@ -38,10 +33,10 @@ set(HEADER_PATTERN  Pattern/SignatureFinder.hpp)
 file(GLOB Pattern ${SOURCE_PATTERN} ${HEADER_PATTERN})
 source_group(Core\\Pattern FILES ${Pattern})
 ##############################################
+set(SOURCE_HOOKS    Hooks/DetourBase.cpp)
 
-set(SOURCE_HOOKS    Hooks/HookFactory.cpp)
-
-set(HEADER_HOOKS    Hooks/HookFactory.hpp)
+set(HEADER_HOOKS    Hooks/DetourBase.hpp
+                    Hooks/FastCallHook.hpp)
 
 file(GLOB Hooks ${SOURCE_HOOKS} ${HEADER_HOOKS})
 source_group(Core\\Hooks FILES ${Hooks})
@@ -94,8 +89,7 @@ set(HEADER_SDK      RL/SDK.hpp
                     RL/SDK/RL_WinDrv_structs.hpp
                     RL/SDK/RL_XAudio2_classes.hpp
                     RL/SDK/RL_XAudio2_parameters.hpp
-                    RL/SDK/RL_XAudio2_structs.hpp
-                    Hooks/Detail/FFrame.hpp)
+                    RL/SDK/RL_XAudio2_structs.hpp)
 
 file(GLOB SDK ${SOURCE_SDK} ${HEADER_SDK})
 source_group(Core\\SDK FILES ${SDK})

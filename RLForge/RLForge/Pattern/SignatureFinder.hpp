@@ -14,9 +14,9 @@ class SignatureFactory
 {
 public:
 	template<typename T>
-	static std::optional<T> FindAddress(const unsigned char* pattern, const char* mask, int offset)
+	static T FindAddress(const unsigned char* pattern, const char* mask, int offset)
 	{
 		uintptr_t address = Detail::FindPattern(GetModuleHandleW(nullptr),pattern,mask);
-		return (address != -1) ? std::make_optional(reinterpret_cast<T>(address + offset)) : std::nullopt;
+		return (address != -1) ? reinterpret_cast<T>(address + offset) : -1;
 	}
 };

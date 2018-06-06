@@ -3,8 +3,8 @@
 
 #include "Core.h"
 #include "../Pattern/SignatureFinder.hpp"
-#include "../Hooks/HookFactory.hpp"
 #include "../RL/SDK.hpp"
+
 
 
 
@@ -27,23 +27,21 @@ bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
     return true;
 }
 
-
 static const unsigned char* ProcessEventPattern = (const unsigned char*)"\x55\x8B\xEC\x6A\xFF\x68\x00\x00\x00\x00\x64\xA1\x00\x00\x00\x00\x50\x83\xEC\x40";
 static const unsigned char* CallFunctionPattern = (const unsigned char*)"\x55\x8D\xAC\x24\x00\x00\x00\x00\x81\xEC\x00\x00\x00\x00\x6A\xFF\x68\x00\x00\x00\x00\x64\xA1\x00\x00\x00\x00\x50\x83\xEC\x40";
 
 static const char* ProcessEventMask = "xxxxxx????xx????xxxx";
 static const char* CallFunctionMask = "xxxx????xx????xxx????xx????xxxx";
 
+
+
 void onAttach(HMODULE hModule)
 {
     DisableThreadLibraryCalls(hModule);
     Core::AttachConsole();
     
-    uintptr_t ProcessEventPointer = Detail::FindPattern(GetModuleHandleW(nullptr),ProcessEventPattern,ProcessEventMask);
- 	uintptr_t CallFunctionPointer = Detail::FindPattern(GetModuleHandleW(nullptr),CallFunctionPattern,CallFunctionMask);
- 	
-	printf("%p\n",(void*)ProcessEventPointer);
-	printf("%p\n",(void*)CallFunctionPointer);
+	
+	
 }
 
 void onDetach(HMODULE hModule)
