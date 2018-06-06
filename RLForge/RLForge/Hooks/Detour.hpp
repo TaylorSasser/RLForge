@@ -16,13 +16,20 @@ public:
 	
 	~Detour()
 	{
-		Restore();
+        DWORD OldProtection = 0;
+        if (!VirtualProtect(this->OriginalFunctionAddress, this->OriginalSize, PAGE_EXECUTE_READWRITE, &OldProtection))
+            return;
+
+        memcpy(this->OriginalFunctionAddress, this->OriginalCode, this->OriginalSize);
+        VirtualProtect(this->OriginalFunctionAddress, this->OriginalSize, OldProtection, &OldProtection);
 	}
 	
 	bool Hook(Type Pointer, HookType HookPointer)
 	{
-		this->OriginalFunction = CallOriginalFunction = Pointer;
+		this->OriginalFunctionPointer = OriginalFunctionAddress = Pointer;
 		this->CallbackFunction = HookPointer;
+
+
 		
 		if (!AllocateBuffer(reinterpret_cast<uint8_t*>(Pointer)))
 			return false;
@@ -38,23 +45,26 @@ public:
 		HookHolder.init(Runtime.getCodeInfo());
 		asmjit::X86Assembler HookJump(&HookHolder);
 		
-		ThunkJump.jmp(asmjit::x86::ptr_32(*BufferPointer));
+		ThunkJump.jmp(asmjit::x86::ptr_32(*TrampolineBuffer));
 		this->OriginalSize = ThunkHolder.getCodeSize();
-		CopyOldCode((uint8_t*)this->OriginalFunction);
+
+		CopyOldCode((uint8_t*)this->OriginalFunctionAddress);
+
 		asmjit::X86Mem ThreadLocalStorage = asmjit::x86::dword_ptr_abs(0x14);
+		//asmjit::X86Mem ThreadLocalStorage = asmjit::x86::dword_ptr(static_cast<uintptr_t>(FunctionHandler));
 		ThreadLocalStorage.setSegment(asmjit::x86::fs);
 		HookJump.mov(ThreadLocalStorage,asmjit::x86::eax);
 		HookJump.jmp((asmjit::x86::ptr)(static_cast<uint32_t>(&HookHandler<Function,C>::HandlerWrapper)));
-		HookHolder.relocate(this->BufferPointer);
+		HookHolder.relocate(this->TrampolineBuffer);
 
-		HookHolder._codeInfo.setBaseAddress((uintptr_t)this->OriginalFunction);
-		ThunkHolder.relocate(this->TrampolineCode);
+		HookHolder._codeInfo.setBaseAddress((uintptr_t)this->OriginalFunctionAddress);
+		ThunkHolder.relocate(this->TrampolineBytes);
 
 		DWORD OldProtection;
-		if (!VirtualProtect(this->OriginalCode,this->OriginalSize,PAGE_EXECUTE_READWRITE,&OldProtection))
+		if (!VirtualProtect(this->OriginalFunctionAddress,this->OriginalSize,PAGE_EXECUTE_READWRITE,&OldProtection))
 		    return false;
 
-		memcpy(this->OriginalCode,this->TrampolineCode,this->OriginalSize);
+		memcpy(this->OriginalCode,this->TrampolineBytes,this->OriginalSize);
 		VirtualProtect(this->OriginalCode,this->OriginalSize,OldProtection,&OldProtection);
 		this->isHooked = (this->OriginalSize != 0);
 
