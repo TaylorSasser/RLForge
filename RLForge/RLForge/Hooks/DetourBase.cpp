@@ -2,6 +2,7 @@
 #include <windows.h>
 
 #include "DetourBase.hpp"
+#include "Assembly/LDAssembly.hpp"
 
 DetourBase::~DetourBase() {
 	free(TrampolineBuffer);
@@ -44,8 +45,52 @@ bool DetourBase::EnableHook() {
 
 void DetourBase::CopyOldCode(uint8_t* Pointer)
 {
-    uint8_t* src = Pointer;
-    uint8_t* old = (uint8_t*)OriginalFunctionPointer;
-    uint32_t all_len = 0;
-    ldasm_data ld = { 0 };
+    uint8_t* Source = Pointer;
+	auto* Old = (uint8_t*)OriginalFunctionPointer;
+    uint32_t TotalLength = 0;
+    ldasm_data LoaderData = { 0 };
+	
+	do
+	{
+		uint32_t len = ldasm(Source,&LoaderData,0);
+		
+		// Determine code end
+		if (LoaderData.flags & F_INVALID
+			|| (len == 1 && (Source[LoaderData.opcd_offset] == 0xCC || Source[LoaderData.opcd_offset] == 0xC3))
+			|| (len == 3 && Source[LoaderData.opcd_offset] == 0xC2)
+			|| len + TotalLength > 128)
+		{
+			break;
+		}
+		
+		// move instruction
+		memcpy(Old,Source, len );
+		
+		// if instruction has relative offset, calculate new offset
+		if (LoaderData.flags & F_RELATIVE)
+		{
+			int32_t diff = 0;
+			const uintptr_t ofst = (LoaderData.disp_offset != 0 ? LoaderData.disp_offset : LoaderData.imm_offset);
+			const uintptr_t sz = LoaderData.disp_size != 0 ? LoaderData.disp_size : LoaderData.imm_size;
+			
+			memcpy(&diff,Source + ofst, sz );
+			
+			diff += Source - Old;
+			memcpy(Old + ofst, &diff, sz );
+		}
+		
+		Source += len;
+		Old += len;
+		TotalLength += len;
+		
+	} while (TotalLength < this->OriginalSize);
+	
+	
+	if (TotalLength < this->OriginalSize)
+		memcpy(this->OriginalCode,Pointer,this->OriginalSize);
+	else
+	{
+		SET_JUMP(Old,Source);
+		this->OriginalFunctionPointer = this->OriginalCode;
+	}
 }

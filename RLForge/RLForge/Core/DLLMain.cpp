@@ -1,7 +1,9 @@
 #include <Windows.h>
 #include <iomanip>
+#include <iostream>
 
 #include "Core.h"
+#include "../Hooks/Detour.hpp"
 #include "../Pattern/SignatureFinder.hpp"
 #include "../RL/SDK.hpp"
 
@@ -27,12 +29,17 @@ bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
     return true;
 }
 
-static const unsigned char* ProcessEventPattern = (const unsigned char*)"\x55\x8B\xEC\x6A\xFF\x68\x00\x00\x00\x00\x64\xA1\x00\x00\x00\x00\x50\x83\xEC\x40";
-static const unsigned char* CallFunctionPattern = (const unsigned char*)"\x55\x8D\xAC\x24\x00\x00\x00\x00\x81\xEC\x00\x00\x00\x00\x6A\xFF\x68\x00\x00\x00\x00\x64\xA1\x00\x00\x00\x00\x50\x83\xEC\x40";
+__attribute__((fastcall))
+void TestFastCall(int& a1,float)
+{
+	std::cout << "TestFastcall called. Argument = " << a1 << "\r\n";
+}
 
-static const char* ProcessEventMask = "xxxxxx????xx????xxxx";
-static const char* CallFunctionMask = "xxxx????xx????xxx????xx????xxxx";
-
+__attribute__((fastcall))
+void hkTestFastcall(int& a1, float&)
+{
+	std::cout << "hkTestFastcall called. Argument = " << a1 << "\r\n";
+}
 
 
 void onAttach(HMODULE hModule)
@@ -40,6 +47,12 @@ void onAttach(HMODULE hModule)
     DisableThreadLibraryCalls(hModule);
     Core::AttachConsole();
     
+	Detour<decltype(&TestFastCall)> TestDetour;
+	
+	TestDetour.Hook(&TestFastCall,&hkTestFastcall);
+	
+	int x = 5;
+	TestFastCall(x,10f);
 	
 	
 }
