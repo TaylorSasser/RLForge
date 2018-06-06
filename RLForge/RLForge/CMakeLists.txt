@@ -36,7 +36,8 @@ source_group(Core\\Pattern FILES ${Pattern})
 set(SOURCE_HOOKS    Hooks/DetourBase.cpp)
 
 set(HEADER_HOOKS    Hooks/DetourBase.hpp
-                    Hooks/FastCallHook.hpp)
+                    Hooks/Detour.hpp
+                    Hooks/HookHandlers.hpp)
 
 file(GLOB Hooks ${SOURCE_HOOKS} ${HEADER_HOOKS})
 source_group(Core\\Hooks FILES ${Hooks})
