@@ -2,9 +2,6 @@
 
 #include "HookHandlers.hpp"
 
-
-
-
 template<typename Function, class C = NoClass>
 class Detour : public HookHandler<Function,C> {
 public:
@@ -41,8 +38,13 @@ public:
 		
 		CopyOldCode((uint8_t*)this->OriginalFunction);
 		
-		HookJump.mov(asmjit::x86::dword_ptr_abs( 0x14 ).setSegment( asmjit::x86::fs ) , (uint32_t)this );
+		asmjit::X86Mem ThreadLocalStorage = asmjit::x86::dword_ptr_abs(0x14);
+		ThreadLocalStorage.setSegment(asmjit::x86::fs);
+		HookJump.mov(ThreadLocalStorage,asmjit::x86::eax);
 		
-		HookJump.mov(asmjit::x86::dword_ptr_abs(0x14).setSegment(asmjit::x86::fs),(uint32_t)this);
+		HookJump.jmp((asmjit::x86::ptr)(static_cast<uint32_t>(&HookHandler<Function,C>::HandlerWrapper)));
+		
+		HookHolder.relocate(this->BufferPointer);
+		HookHolder._codeInfo.setBaseAddress((uintptr_t)this->OriginalFunction);
 	}
 };
