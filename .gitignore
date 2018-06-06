@@ -26,7 +26,7 @@ CTestTestfile.cmake
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 
-/Build
+Build/
 
 # Gradle
 .idea/**/gradle.xml
